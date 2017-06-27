@@ -40,8 +40,8 @@ npm install
 
 # Replace soljson with current build
 echo "Replacing soljson.js"
-rm -f soljson.js
-ln -s $REPO_ROOT/build/solc/soljson.js soljson.js
+#rm -f soljson.js
+#ln -s $REPO_ROOT/build/solc/soljson.js soljson.js
 
 # Update version (needed for some tests)
 rm -f version version.c
