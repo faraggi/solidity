@@ -51,10 +51,12 @@ cat <<EOF > version.c
 #include "../include/solidity/BuildInfo.h"
 int main(int argc, char **argv) {
   printf(ETH_PROJECT_VERSION);
+  return 0;
 }
 EOF
 echo "Compiling version.c"
 gcc -o version version.c
+echo "Running version"
 VERSION=`./version`
 echo "Updating package.json to version $VERSION"
 npm version $VERSION
